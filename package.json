@@ -1,0 +1,47 @@
+{
+  "name": "udacity-image-processor",
+  "version": "1.0.0",
+  "description": "Udacity Image Processing API",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "nodemon src/index.ts",
+    "build": "tsc --build && mkdir -p ./build/assets/source-images && cp ./src/assets/source-images/* ./build/assets/source-images/",
+    "test": "ts-node node_modules/jasmine/bin/jasmine",
+    "lint": "eslint . --ext .ts",
+    "prettier": "prettier --config .prettierrc.json './src/*.ts' './src/**/*.ts' --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrancoisJordaan/udacity-image-processor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrancoisJordaan/udacity-image-processor/issues"
+  },
+  "homepage": "https://github.com/FrancoisJordaan/udacity-image-processor#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.15",
+    "@types/jasmine": "^4.3.1",
+    "@types/node": "^18.11.17",
+    "@types/sharp": "^0.31.0",
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
+    "@typescript-eslint/parser": "^5.47.1",
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.1",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.1.1",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "jasmine": "^4.5.0",
+    "sharp": "^0.31.3",
+    "supertest": "^6.3.3"
+  }
+}

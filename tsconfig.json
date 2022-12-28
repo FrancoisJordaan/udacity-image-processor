@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "outDir": "build/",
+    "strict": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "types": ["node", "jasmine"]
+  },
+  "include": ["/**/*.ts", "src/**/*"],
+  "exclude": ["node_modules", "**/*[sS]pec.ts"]
+}
