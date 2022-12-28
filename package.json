@@ -5,6 +5,7 @@
   "main": "build/index.js",
   "scripts": {
     "start": "nodemon src/index.ts",
+    "start:prod": "node build/index.js",
     "build": "tsc --build && mkdir -p ./build/assets/source-images && cp ./src/assets/source-images/* ./build/assets/source-images/",
     "test": "ts-node node_modules/jasmine/bin/jasmine",
     "lint": "eslint . --ext .ts",
