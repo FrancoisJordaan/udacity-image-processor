@@ -12,6 +12,8 @@ describe('Test endpoint responses', () => {
     const response = await request.get(
       '/api/images/?filename=boo&width=300&height=300'
     )
-    expect(response.text).toEqual('Sorry, there is no image with a file name of boo')
+    expect(response.text).toEqual(
+      'Sorry, there is no image with a file name of boo'
+    )
   })
 })

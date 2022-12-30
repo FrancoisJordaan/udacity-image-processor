@@ -8,8 +8,8 @@
     "start:prod": "node build/index.js",
     "build": "tsc --build && mkdir -p ./build/assets/source-images && cp ./src/assets/source-images/* ./build/assets/source-images/",
     "test": "ts-node node_modules/jasmine/bin/jasmine",
-    "lint": "eslint . --ext .ts",
-    "prettier": "prettier --config .prettierrc.json './src/*.ts' './src/**/*.ts' --write"
+    "lint": "eslint  'src/**/*.ts'  ",
+    "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write"
   },
   "repository": {
     "type": "git",

@@ -1,4 +1,5 @@
-import { resizeImage, findSourceImage } from '../../utilities/imageUtils'
+import imageUtils from '../../utilities/imageUtils'
+import resizeImage from '../../utilities/sharpImageResizer'
 
 describe('resizeImage', () => {
   it("should return an error if the file name provided doesn't exist in the src/assets/source-images directory", async () => {
@@ -15,9 +16,9 @@ describe('resizeImage', () => {
 
 describe('findSourceImage', () => {
   it('should return true if the provided image name exists in the source-images folder', async () => {
-    expect(await findSourceImage('fjord')).toBe(true)
+    expect(await imageUtils.findSourceImage('fjord')).toBe(true)
   })
   it("should return true if the provided image name doesn't exist in the source-images folder", async () => {
-    expect(await findSourceImage('boo')).toBe(false)
+    expect(await imageUtils.findSourceImage('boo')).toBe(false)
   })
 })

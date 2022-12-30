@@ -1,3 +1,11 @@
+# Ignore everything recursively
+/*
+
 # Ignore artifacts:
-build
-node_modules
+/build
+/node_modules
+# But not the .ts files
+!*.ts
+
+# Check subdirectories too
+!*/
