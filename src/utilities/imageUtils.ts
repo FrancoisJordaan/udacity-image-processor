@@ -1,6 +1,5 @@
 import { existsSync } from 'node:fs'
 import express, { NextFunction } from 'express'
-
 import path from 'path'
 import { ImageProperties } from '../routes/api/images'
 

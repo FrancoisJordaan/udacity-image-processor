@@ -16,4 +16,13 @@ describe('Test endpoint responses', () => {
       'Sorry, there is no image with a file name of boo'
     )
   })
+  it('expects the api/images endpoint to redirect the user if the image with the specified size and name exists', async () => {
+    await request.get('/api/images/?filename=fjord&width=300&height=300')
+    const response = await request.get(
+      '/api/images/?filename=fjord&width=300&height=300'
+    )
+    expect(response.headers.location).toEqual(
+      'http://localhost:4055/api/images/fjord_300x300.jpeg'
+    )
+  })
 })
